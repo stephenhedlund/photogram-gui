@@ -8,6 +8,13 @@ class PhotoController<ApplicationController
   end
   
   def photo_detail
+    photo_id=params.fetch("photo_id")
+    
+    matching_photo=Photo.where({:id=> photo_id})
+    @the_photo=matching_photo.at(0)
+
+
+
     render({:template=> "photo_templates/photo_detail"})
   end
 
