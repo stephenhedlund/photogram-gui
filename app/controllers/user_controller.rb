@@ -24,7 +24,6 @@ def new_user
 
   new_user = User.new
   new_user.username = the_username
-  new_user.id = @last_user+ 1
 
   new_user.save
 
